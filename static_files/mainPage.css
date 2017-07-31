@@ -1,0 +1,27 @@
+body {
+  margin: 0px;
+}
+
+div#welcometext {
+  background-color: #448AC9;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 150px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+#loginbutton {
+  background-color: silver;
+  width: 20%;
+  padding: 10px;
+  position: relative;
+  left: 900px;
+  top: 300px;
+  color: #448AC9;
+  text-align: center;
+  font-family: "Open Sans Light", "Helvetica Neue", sans-serif;
+  font-size: 80px;
+
+}
