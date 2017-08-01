@@ -27,7 +27,8 @@ class MainHandler(webapp2.RequestHandler):
         self.response.write(my_template.render())
 class LoginHandler(webapp2.RequestHandler):
         def get(self):
-            self.response.write("Hello")
+            my_template = jinja_environment.get_template("templates/login.html")
+            self.response.write(my_template.render())
 class AboutHandler(webapp2.RequestHandler):
         def get(self):
             my_template = jinja_environment.get_template("templates/aboutPage.html")
