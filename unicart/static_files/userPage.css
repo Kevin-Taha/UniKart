@@ -6,3 +6,13 @@
 
   bottom: 200px;
 }
+
+#cartFunction {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 30px;
+  opacity: 0.7;
+  bottom: 90px;
+  left: 40;
+  position: relative;
+
+}
