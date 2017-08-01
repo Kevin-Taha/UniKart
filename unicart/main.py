@@ -38,7 +38,7 @@ class LoginHandler(webapp2.RequestHandler):
             </a>
             <a href = "userPage">
             </br>
-            Otherwise, Continue
+             <h1> Continue to the Main Page </h1>
             </a>
             '''.format(
                 nickname, logout_url)
