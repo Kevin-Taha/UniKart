@@ -33,7 +33,7 @@ class AboutHandler(webapp2.RequestHandler):
         def get(self):
             my_template = jinja_environment.get_template("templates/aboutPage.html")
             self.response.write(my_template.render())
-class UserPage(webapp2.RequestHandler):
+class UserPageHandler(webapp2.RequestHandler):
         def get(self):
             my_template = jinja_environment.get_template("templates/userPage.html")
             self.response.write(my_template.render())
