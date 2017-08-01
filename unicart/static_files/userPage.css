@@ -34,14 +34,6 @@
   font-size: 30px;
 }
 
-<<<<<<< HEAD
-#usercheck {
-    font-family: "Open Sans Light", "Helvetica Neue", sans-serif;
-    font-weight: bold;
-    position: absolute;
-    left: 1100px;
-
-=======
 
 
 #emptylist {
@@ -65,5 +57,9 @@
         -webkit-transform: scale(1.1);
         -ms-transform: scale(1.1);
         transform: scale(1.1);
->>>>>>> 0ef3af9c3bb5b51bd8482a02659cef4cb1e48cce
 }
+#usercheck {
+    font-family: "Open Sans Light", "Helvetica Neue", sans-serif;
+    font-weight: bold;
+    position: absolute;
+    left: 1100px;
