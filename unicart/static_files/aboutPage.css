@@ -1,5 +1,6 @@
-h1 {
+h1, h2, h3{
   text-align: center;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 div {
@@ -18,4 +19,8 @@ div {
   top: 25px;
   padding-left: 0px;
   padding-right: 0px;
+}
+
+p {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
