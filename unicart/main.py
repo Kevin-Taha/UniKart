@@ -38,7 +38,7 @@ class LoginHandler(webapp2.RequestHandler):
             </a>
             <a href = "userPage">
             </br>
-            Otherwise, Continue
+             <h1> Continue to the Main Page </h1>
             </a>
             '''.format(
                 nickname, logout_url)
@@ -55,9 +55,14 @@ class UserPageHandler(webapp2.RequestHandler):
         def get(self):
             my_template = jinja_environment.get_template("templates/userPage.html")
             self.response.write(my_template.render())
+class ListHandler(webapp2.RequestHandler):
+    def get(self):
+        my_template = jinja_environment.get_template("templates/listPage.html")
+        self.response.write(my_template.render())
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
     ('/login', LoginHandler),
     ('/about', AboutHandler),
-    ('/userPage', UserPageHandler )
+    ('/userPage', UserPageHandler),
+    ('/lists', ListHandler)
 ], debug=True)
