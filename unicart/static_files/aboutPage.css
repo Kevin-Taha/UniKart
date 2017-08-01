@@ -5,3 +5,7 @@ h1 {
 div {
   text-align: center;
 }
+
+#aboutText {
+  font-size: 80px;
+}
