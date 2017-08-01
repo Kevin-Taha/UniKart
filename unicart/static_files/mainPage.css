@@ -59,6 +59,8 @@ div#welcometext {
 }
 a {
   color: black;
-
+}
+#logintext {
+  opacity: .6;
 
 }
