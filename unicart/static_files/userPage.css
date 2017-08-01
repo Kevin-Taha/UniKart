@@ -16,3 +16,17 @@
   position: relative;
 
 }
+
+
+#loginbutton {
+  background-color: silver;
+  width: 10%;
+  padding: 10px;
+  position: right;
+  top: 30px;
+  color: #448AC9;
+  text-align: center;
+  font-family: "Open Sans Light", "Helvetica Neue", sans-serif;
+  border-radius: 25px;
+  font-size: 30px;
+}
