@@ -33,3 +33,11 @@
   border-radius: 25px;
   font-size: 30px;
 }
+
+#usercheck {
+    font-family: "Open Sans Light", "Helvetica Neue", sans-serif;
+    font-weight: bold;
+    position: absolute;
+    left: 1100px;
+
+}

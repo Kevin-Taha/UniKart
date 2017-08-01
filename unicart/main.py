@@ -54,7 +54,12 @@ class AboutHandler(webapp2.RequestHandler):
 class UserPageHandler(webapp2.RequestHandler):
         def get(self):
             my_template = jinja_environment.get_template("templates/userPage.html")
-            self.response.write(my_template.render())
+            user = users.get_current_user()
+            nickname = user.nickname()
+            render_data = {
+                'username' : nickname,
+            }
+            self.response.write(my_template.render(render_data))
 class ListHandler(webapp2.RequestHandler):
     def get(self):
         my_template = jinja_environment.get_template("templates/listPage.html")
