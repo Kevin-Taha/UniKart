@@ -30,13 +30,15 @@ class LoginHandler(webapp2.RequestHandler):
     def get(self):
         user = users.get_current_user()
         if user:
-            greeting = ('Welcome, %s! (<a href="%s">sign out</a>)' %
-                (user.nickname(), users.create_logout_url('/')))
+            nickname = user.nickname()
+            logout_url = users.create_logout_url('/')
+            greeting = 'Welcome, {}! (<a href="{}">sign out</a> <a href = "userPage"> Continue </a>)'.format(
+                nickname, logout_url)
         else:
-            greeting = ('<a href="%s">Sign in or register</a>.' %
-                users.create_login_url('/'))
+            login_url = users.create_login_url('/userPage')
+            greeting = '<a href="{}">Sign in</a>'.format(login_url)
 
-        self.response.write('<html><body>%s</body></html>' % greeting)
+        self.response.write('<html><body>{}</body></html>'.format(greeting))
 class AboutHandler(webapp2.RequestHandler):
         def get(self):
             my_template = jinja_environment.get_template("templates/aboutPage.html")
