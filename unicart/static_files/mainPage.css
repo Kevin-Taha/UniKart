@@ -20,10 +20,11 @@ div#welcometext {
   padding: 10px;
   position: relative;
   left: 900px;
-  top: 300px;
+  top: 220px;
   color: #448AC9;
   text-align: center;
   font-family: "Open Sans Light", "Helvetica Neue", sans-serif;
+  border-radius: 25px;
   font-size: 80px;
 }
 #welcome {
