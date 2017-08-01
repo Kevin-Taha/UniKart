@@ -30,6 +30,7 @@ class LoginHandler(webapp2.RequestHandler):
             self.response.write("Hello")
 class AboutHandler(webapp2.RequestHandler):
         def get(self):
+            my_template = jinja_environment.get_template("templates/aboutPage.html")
             self.response.write("Hello")
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
