@@ -9,3 +9,13 @@ div {
 #aboutText {
   font-size: 80px;
 }
+
+#welcometext {
+  background-color: #448AC9;
+  width: 100%;
+  height: 155%;
+  position: relative;
+  top: 25px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
