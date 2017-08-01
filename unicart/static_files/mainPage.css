@@ -1,0 +1,46 @@
+html,body {
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  overflow-x: hidden;
+}
+div#welcometext {
+  background-color: #448AC9;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 150px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+#loginbutton {
+  background-color: silver;
+  width: 20%;
+  padding: 10px;
+  position: relative;
+  left: 900px;
+  top: 300px;
+  color: #448AC9;
+  text-align: center;
+  font-family: "Open Sans Light", "Helvetica Neue", sans-serif;
+  font-size: 80px;
+}
+#welcome {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 100px;
+  opacity: 0.7;
+  position: relative;
+  left: 150px;
+  bottom: 130px;
+}
+#intromessage {
+  display: inline-block;
+  font-size: 30px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  width: 35%;
+  position: relative;
+  left: 170px;
+  bottom: 200px;
+  line-height: 1.55em;
+}
