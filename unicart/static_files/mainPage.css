@@ -56,6 +56,9 @@ div#welcometext {
   display: inline-block;
   font-size: 16px;
   float: right;
+}
+a {
+  color: black;
 
 
 }
