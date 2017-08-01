@@ -32,7 +32,7 @@ class LoginHandler(webapp2.RequestHandler):
         if user:
             nickname = user.nickname()
             logout_url = users.create_logout_url('/')
-            greeting = 'Welcome, {}! (<a href="{}">sign out</a> )'.format(
+            greeting = 'Welcome, {}! (<a href="{}">sign out</a> <a href = "userPage"> Continue </a>)'.format(
                 nickname, logout_url)
         else:
             login_url = users.create_login_url('/userPage')
