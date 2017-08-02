@@ -87,6 +87,13 @@ class ListHandler(webapp2.RequestHandler):
 class ViewHandler(webapp2.RequestHandler):
         def get(self):
             my_template = jinja_environment.get_template("templates/view.html")
+            itemname = self.request.get("name")
+            itemtag = self.request.get("tag")
+            itemprice = self.request.get("price")
+            itemurl = self.request.get("url")
+            itemquantity = self.request.get("quantity")
+
+
             self.response.write(my_template.render())
 
 
