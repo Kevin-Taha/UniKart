@@ -68,6 +68,8 @@ class UserPageHandler(webapp2.RequestHandler):
             render_dict = {}
             render_data["cartname"] = firstCartName
             self.response.write(my_template.render(render_data))
+
+
 class ListHandler(webapp2.RequestHandler):
     def get(self):
         user = users.get_current_user()

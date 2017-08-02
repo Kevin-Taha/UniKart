@@ -40,9 +40,29 @@
 #emptylist {
   background-color: grey;
   padding: 90px;
-  position: absolute;
-  left: 60px;
-  top: 200px;
+
+
+  border-radius: 25px;
+
+
+}
+
+#textlist{
+
+  display: table-cell;
+  vertical-align:top;
+  text-align: center;
+  width: 60px;
+  height: 50px;
+}
+
+
+#fulllist {
+  background-color: grey;
+  padding: 110px;
+
+
+
   border-radius: 25px;
 
 
@@ -73,16 +93,4 @@
   left: 50px;
   float: left;
 
-}
-
-li {
-    display: inline-flex;
-    width: 60px;
-    float: left;
-    text-align: center;
-    font-size: 20px;
-}
-
-a {
-  color: black;
 }
