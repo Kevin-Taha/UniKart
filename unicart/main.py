@@ -70,6 +70,8 @@ class ListHandler(webapp2.RequestHandler):
         my_template = jinja_environment.get_template("templates/listPage.html")
         cartName = self.request.get("cartname")
         cartBudget = self.request.get("budget")
+        if cartBudget == "":  #PLEASE FIX BUG HERE
+            cartBudget = 0
         cartDesc = self.request.get("desc")
         myCart = Cart(name = cartName, budget = int(cartBudget), description = cartDesc, user = nickname )
         myCart.put()
