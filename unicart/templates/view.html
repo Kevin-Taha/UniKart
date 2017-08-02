@@ -4,8 +4,13 @@
   <link rel="StyleSheet" href="/resources/mainPage.css"> </link>
   <link rel="StyleSheet" href="/resources/listPage.css"> </link>
   <link rel="StyleSheet" href="/resources/userPage.css"> </link>
+  <link rel="StyleSheet" href="/resources/view.css"> </link>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<a href = "/"> &nbsp;
+<a href="/"> &nbsp;
   <img id = "logo" src= "/resources/unikart.png">
 </a>
 
@@ -16,7 +21,34 @@
     </div>
   </a>
   <div id="welcometext">
+    <div class="header">
+  <p> Click on the button start adding new cart items</p>
+  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Add Item</button>
+  <div id="demo" class="collapse">
+    <form id = "newitem">
+      Tag <select name = "Tag">
+        <option value = "electronics"> Electronics </option>
+        <option value = "furniture"> Furniture </option>
+        <option value = "clothing"> Clothing </option>
+        <option value = "entertainment"> Entertainment </option>
+        <option value = "hgt"> Home, Garden, and Tools </option>
+        <option value = "grocery"> Groceries </option>
+        <option value ="kids"> Toys and Kids </option>
+        <option value = "health"> Health </option>
+        <option value = "other"> Other </option>
+      </select>
+      Item Name:<input type = "text" name = "itemname"/>
+      Price:  <input type = "number"  name = "itemprice" />
+      URL:  <input type = "text" name = "itemurl" class = "required"/>
+      Quantity:  <input type = "number" name = "quantity" style = "width: 40px;" />
+    </br>
+      <input id = "itemsub" type = "submit" value = "Add Item" />
 
-</body>
+    </form>
 
-</html>
+  </div>
+</div>
+
+    </body>
+
+      </html>

@@ -1,8 +1,8 @@
 from google.appengine.ext import ndb
 
-class List(ndb.Model):
-    title = ndb.StringProperty()
-    name = ndb.StringProperty()
+class Item(ndb.Model):
+    itemname = ndb.StringProperty()
     url = ndb.StringProperty()
     price = ndb.IntegerProperty()
     tag = ndb.StringProperty()
+    quantity = ndb.IntegerProperty()

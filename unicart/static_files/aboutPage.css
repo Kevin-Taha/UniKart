@@ -10,7 +10,7 @@ div {
 #aboutText {
   font-size: 80px;
   position: relative;
-  right: 70px;
+  right: 110px;
 }
 
 #welcometext {
@@ -36,4 +36,16 @@ p {
   display: inline-block;
   font-size: 16px;
   float: right;
+}
+
+li {
+    display: inline-flex;
+    width: 60px;
+    float: left;
+    text-align: center;
+    font-size: 20px;
+}
+
+a {
+  color: black;
 }

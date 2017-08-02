@@ -5,6 +5,7 @@
   opacity: 0.7;
   bottom: 200px;
   opacity: .6;
+  margin-top: 0px;
 }
 
 #cartFunction {
@@ -93,4 +94,19 @@
   left: 50px;
   float: left;
 
+<<<<<<< HEAD
+=======
+}
+
+li {
+    display: inline-flex;
+    width: 60px;
+    float: left;
+    text-align: center;
+    font-size: 20px;
+}
+
+a {
+  color: black;
+>>>>>>> 68ecbc8d14200bf5300e62ebd4f8b44a65e2aa82
 }
