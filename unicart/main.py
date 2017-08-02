@@ -19,6 +19,7 @@ import jinja2
 import os
 from google.appengine.api import users
 from cart import Cart
+from item import Item
 
 jinja_environment = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
@@ -90,9 +91,15 @@ class ViewHandler(webapp2.RequestHandler):
             itemname = self.request.get("name")
             itemtag = self.request.get("tag")
             itemprice = self.request.get("price")
+            if itemprice == "":
+                itemprice = 0
             itemurl = self.request.get("url")
             itemquantity = self.request.get("quantity")
-
+            if itemquantity == "":
+                itemquantity = 1
+            my_item = Item(itemname = itemname, url = itemurl, price = int(itemprice), tag = itemtag, quantity = int(itemquantity))
+            if itemname != "":
+                my_item.put()
 
             self.response.write(my_template.render())
 
