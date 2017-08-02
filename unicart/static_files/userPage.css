@@ -47,6 +47,27 @@
 
 }
 
+#textlist{
+
+  display: table-cell;
+  vertical-align:top;
+  width: 60px;
+  height: 50px;
+}
+
+
+#fulllist {
+  background-color: grey;
+  padding: 110px;
+  position: absolute;
+  left: 60px;
+  top: 550px;
+
+  border-radius: 25px;
+
+
+}
+
 .fade
 {
         opacity:0.8;
@@ -71,5 +92,5 @@
   top: 50px;
   left: 50px;
   float: left;
-  
+
 }
