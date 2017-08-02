@@ -9,3 +9,12 @@
   top: 10px;
   Right: 30px;
 }
+
+#welcometext {
+  background-color: #448AC9;
+  width: 100%;
+  position: relative;
+  top: 100px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
