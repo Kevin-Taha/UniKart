@@ -74,7 +74,8 @@ class ListHandler(webapp2.RequestHandler):
             cartBudget = 0
         cartDesc = self.request.get("desc")
         myCart = Cart(name = cartName, budget = int(cartBudget), description = cartDesc, user = nickname )
-        myCart.put()
+        if cartName != "":
+            myCart.put()
         self.response.write(my_template.render())
 
 
