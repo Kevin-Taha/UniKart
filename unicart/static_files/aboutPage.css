@@ -9,6 +9,8 @@ div {
 
 #aboutText {
   font-size: 80px;
+  position: relative;
+  left: 50px;
 }
 
 #welcometext {
