@@ -78,6 +78,10 @@ class ListHandler(webapp2.RequestHandler):
             myCart.put()
             self.redirect("userPage")
         self.response.write(my_template.render())
+class ViewHandler(webapp2.RequestHandler):
+        def get(self):
+            my_template = jinja_environment.get_template("templates/view.html")
+            self.response.write(my_template.render())
 
 
 ##################################################################
@@ -86,5 +90,6 @@ app = webapp2.WSGIApplication([
     ('/login', LoginHandler),
     ('/about', AboutHandler),
     ('/userPage', UserPageHandler),
-    ('/lists', ListHandler)
+    ('/lists', ListHandler),
+    ('/view', ViewHandler),
 ], debug=True)
