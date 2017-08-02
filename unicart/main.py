@@ -65,11 +65,13 @@ class UserPageHandler(webapp2.RequestHandler):
             self.response.write(my_template.render(render_data))
 class ListHandler(webapp2.RequestHandler):
     def get(self):
+        user = users.get_current_user()
+        nickname = user.nickname()
         my_template = jinja_environment.get_template("templates/listPage.html")
         cartName = self.request.get("cartname")
         cartBudget = self.request.get("budget")
         cartDesc = self.request.get("desc")
-        myCart = Cart(name = cartName, budget = int(cartBudget), description = cartDesc)
+        myCart = Cart(name = cartName, budget = int(cartBudget), description = cartDesc, user = nickname )
         myCart.put()
         self.response.write(my_template.render())
 
