@@ -1,6 +1,10 @@
 <html>
   <head>
     <title> UniCart </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src = "/resources/mainPage.js"> </script>
     <script src = "/resources/userPage.js"> </script>
@@ -20,22 +24,50 @@
         <li><a href="userPage">Your Carts</a></li>
         <li><a href="about">About</a></li>
       </ul>
-    </br>
-  </br>
-</br>
-</br>
-      <p id ="cartText"> My Carts </p>
+
+
+      <p id ="cartText"> My Carts </p> <br>  </br>  </br>
       <p id = "cartFunction"> Here you can view your carts. </p>
 
-<a href = "lists">
-<div class = "fade" id = "emptylist">
- <img src="/resources/plus.png" width="100" height="100"> </p>
-</div>
-</a>
-<br>
-<div class = "fade" id = "fulllist">
+
+      <div class="container-fluid">
+
+        <div class="row">
+          <div class="col-sm-4" >
+            <a href = "lists">
+          <div class = "fade" id = "emptylist">
+           <img src="/resources/plus.png" width="100" height="80"> </p>
+          </div>
+          </a>
+          <br>
+        </div>
+
+<div class="col-sm-4">
+  <div class = "fade" id = "fulllist">
 <p id = "textlist"> {{cartname}} </p>
 </div>
+<br>
+</div>
+
+
+<div class="col-sm-4">
+  <div class = "fade" id = "fulllist">
+<p id = "textlist"> {{cartname}} </p>
+</div>
+<br>
+</div>
+
+
+<div class="col-sm-4">
+  <div class = "fade" id = "fulllist">
+<p id = "textlist"> {{cartname}} </p>
+</div>
+<br>
+</div>
+
+        </div>
+      </div>
+
 
 
   </body>
