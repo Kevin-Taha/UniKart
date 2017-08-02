@@ -1,4 +1,5 @@
 from google.appengine.ext import ndb
+from cart import Cart
 
 class Item(ndb.Model):
     itemname = ndb.StringProperty()
@@ -6,3 +7,4 @@ class Item(ndb.Model):
     price = ndb.IntegerProperty()
     tag = ndb.StringProperty()
     quantity = ndb.IntegerProperty()
+    incart = ndb.KeyProperty()
