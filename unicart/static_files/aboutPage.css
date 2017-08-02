@@ -10,7 +10,7 @@ div {
 #aboutText {
   font-size: 80px;
   position: relative;
-  left: 50px;
+  right: 70px;
 }
 
 #welcometext {
@@ -25,7 +25,7 @@ p {
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
-#homePage {
+#homeP {
   font-family: "Open Sans Light", "Helvetica Neue", sans-serif;
   background-color: teal; /* Green */
   border: none;
