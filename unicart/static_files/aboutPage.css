@@ -37,3 +37,15 @@ p {
   font-size: 16px;
   float: right;
 }
+
+li {
+    display: inline-flex;
+    width: 60px;
+    float: left;
+    text-align: center;
+    font-size: 20px;
+}
+
+a {
+  color: black;
+}
