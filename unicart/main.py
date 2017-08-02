@@ -64,8 +64,12 @@ class UserPageHandler(webapp2.RequestHandler):
             }
             cartName_query = Cart.query().fetch()[0]
             firstCartName = cartName_query.name
+            firstCartDesc = cartName_query.description
+            firstCartBud = cartName_query.budget
             render_dict = {}
             render_data["cartname"] = firstCartName
+            render_data["cartdesc"] = firstCartDesc
+            render_data["cartbud"] = firstCartBud
             self.response.write(my_template.render(render_data))
 
 
