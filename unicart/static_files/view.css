@@ -1,0 +1,11 @@
+.header {
+  opacity: .7;
+  font-size: 30px;
+  text-align: center;
+}
+#newitem {
+  font-size: 20px;
+  position: relative;
+  top: 10px;
+  Right: 30px;
+}
