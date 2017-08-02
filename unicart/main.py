@@ -62,6 +62,10 @@ class UserPageHandler(webapp2.RequestHandler):
             render_data = {
                 'username' : nickname,
             }
+            cartName_query = Cart.query().fetch()[0]
+            firstCartName = cartName_query.name
+            render_dict = {}
+            render_data["cartname"] = firstCartName
             self.response.write(my_template.render(render_data))
 class ListHandler(webapp2.RequestHandler):
     def get(self):
@@ -78,6 +82,8 @@ class ListHandler(webapp2.RequestHandler):
             myCart.put()
             self.redirect("userPage")
         self.response.write(my_template.render())
+
+
 class ViewHandler(webapp2.RequestHandler):
         def get(self):
             my_template = jinja_environment.get_template("templates/view.html")
