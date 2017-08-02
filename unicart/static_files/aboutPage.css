@@ -22,3 +22,16 @@ div {
 p {
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
+
+#MainLink {
+  font-family: "Open Sans Light", "Helvetica Neue", sans-serif;
+  background-color: teal; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  float: right;
+}
