@@ -10,7 +10,7 @@ div {
 #aboutText {
   font-size: 80px;
   position: relative;
-  right: 110px;
+  text-align: center;
 }
 
 #welcometext {
