@@ -49,17 +49,16 @@
 
 #textlist{
 
-  display: table-cell;
-  vertical-align:top;
-  text-align: center;
-  width: 60px;
-  height: 50px;
+
+  text-align:center;
+  width: 150px;
+  height: 200px;
 }
 
 
 #fulllist {
   background-color: grey;
-  padding: 110px;
+  padding: 40px;
 
 
 
