@@ -64,3 +64,10 @@ a {
   opacity: .6;
 
 }
+
+li {
+    display: inline-flex;
+    width: 60px;
+    font-size: 20px;
+    left: 170;
+}
