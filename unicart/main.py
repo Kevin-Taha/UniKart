@@ -76,6 +76,7 @@ class ListHandler(webapp2.RequestHandler):
         myCart = Cart(name = cartName, budget = int(cartBudget), description = cartDesc, user = nickname )
         if cartName != "":
             myCart.put()
+            self.redirect("userPage")
         self.response.write(my_template.render())
 
 
