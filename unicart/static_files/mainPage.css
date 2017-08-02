@@ -64,6 +64,15 @@ a {
 
 }
 
+#logo {
+  width: 150;
+  height: 100;
+  top: 50px;
+  left: 50px;
+  float: left;
+
+}
+
 li {
     display: inline-flex;
     width: 60px;
