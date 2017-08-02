@@ -75,7 +75,7 @@ a {
 
 li {
     display: inline-flex;
-    width: 60px;
     font-size: 20px;
     left: 170;
+    margin: 5px;
 }

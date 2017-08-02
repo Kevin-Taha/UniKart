@@ -50,10 +50,10 @@ p {
 
 li {
     display: inline-flex;
-    width: 60px;
     float: left;
     text-align: center;
     font-size: 20px;
+    margin: 5px;
 }
 
 a {
