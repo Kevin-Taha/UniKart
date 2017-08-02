@@ -101,9 +101,10 @@ class ViewHandler(webapp2.RequestHandler):
                 itemprice = 0
             itemurl = self.request.get("url")
             itemquantity = self.request.get("quantity")
+            itempriority = self.request.get("priority")
             if itemquantity == "":
                 itemquantity = 1
-            my_item = Item(itemname = itemname, url = itemurl, price = int(itemprice), tag = itemtag, quantity = int(itemquantity))
+            my_item = Item(itemname = itemname, url = itemurl, price = int(itemprice), tag = itemtag, quantity = int(itemquantity), priority = itempriority)
             if itemname != "":
                 my_item.put()
 
