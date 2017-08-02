@@ -18,10 +18,13 @@ import webapp2
 import jinja2
 import os
 from google.appengine.api import users
+from cart import Cart
 
 jinja_environment = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
-
+##################################################################
+#Handlers Start Here
+##################################################################
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         my_template = jinja_environment.get_template("templates/mainPage.html")
@@ -62,8 +65,20 @@ class UserPageHandler(webapp2.RequestHandler):
             self.response.write(my_template.render(render_data))
 class ListHandler(webapp2.RequestHandler):
     def get(self):
+        user = users.get_current_user()
+        nickname = user.nickname()
         my_template = jinja_environment.get_template("templates/listPage.html")
+        cartName = self.request.get("cartname")
+        cartBudget = self.request.get("budget")
+        if cartBudget == "":  #PLEASE FIX BUG HERE
+            cartBudget = 0
+        cartDesc = self.request.get("desc")
+        myCart = Cart(name = cartName, budget = int(cartBudget), description = cartDesc, user = nickname )
+        myCart.put()
         self.response.write(my_template.render())
+
+
+##################################################################
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
     ('/login', LoginHandler),
