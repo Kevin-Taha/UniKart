@@ -4,3 +4,4 @@ class Cart(ndb.Model):
     budget = ndb.IntegerProperty()
     description = ndb.StringProperty()
     user = ndb.StringProperty()
+    userId= ndb.StringProperty()

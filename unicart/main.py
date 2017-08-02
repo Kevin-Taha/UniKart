@@ -58,16 +58,16 @@ class AboutHandler(webapp2.RequestHandler):
 class UserPageHandler(webapp2.RequestHandler):
         def get(self):
             my_template = jinja_environment.get_template("templates/userPage.html")
-            user = users.get_current_user()
-            nickname = user.nickname()
+            current_user = users.get_current_user()
+            nickname = current_user.nickname()
             render_data = {
                 'username' : nickname,
             }
 
-            cartlist = Cart.query().fetch()
+            cartlist = Cart.query(Cart.userId == current_user.user_id()).fetch()
             render_dict = {}
             render_data["cartlist"] = cartlist
-            
+
             self.response.write(my_template.render(render_data))
 
 
@@ -81,7 +81,11 @@ class ListHandler(webapp2.RequestHandler):
         if cartBudget == "":  #PLEASE FIX BUG HERE
             cartBudget = 0
         cartDesc = self.request.get("desc")
-        myCart = Cart(name = cartName, budget = int(cartBudget), description = cartDesc, user = nickname )
+        myCart = Cart(name = cartName,
+                      budget = int(cartBudget),
+                      description = cartDesc,
+                      user = nickname,
+                      userId = user.user_id())
         if cartName != "":
             myCart.put()
             self.redirect("userPage")
