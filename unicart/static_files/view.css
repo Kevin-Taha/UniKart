@@ -135,11 +135,11 @@ section{
 }
 .tabd {
   position: relative;
-  left: 100px;
+  left: 160px;
 }
 .tbdq {
   position: relative;
-  left: 10px;
+  left: 130px;
 }
 .quant {
   position: relative;
@@ -148,7 +148,7 @@ section{
 }
 .tbpr {
   position: relative;
-  right: 100px;
+  right: -70px;
 }
 .tabr {
   position: relative;
@@ -157,5 +157,15 @@ section{
 .checked {
   position: relative;
   left: 50px;
+
+}
+.check {
+  position: relative;
+  left: 100px;
+
+}
+.taburl {
+  position: relative;
+  left: 200px;
 
 }
