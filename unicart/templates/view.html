@@ -42,10 +42,10 @@
       URL:  <input type = "text" name = "url" class = "required"/>
       Quantity:  <input type = "number" name = "quantity" style = "width: 40px;" value = "1"/>
     Priority: <select name = "priority" style = "width: 110px;">
-      <option value = "nothing"></option>
-      <option value = "need"> I need it </option>
-      <option value = "between"> I might need it</option>
-      <option value = "want"> I want it </option>
+      <option value = "None"></option>
+      <option value = "Need"> I need it </option>
+      <option value = "Not Sure"> I might need it</option>
+      <option value = "Want"> I want it </option>
     </select>
       <input type = "hidden" name = "cart"/>
     </br>
@@ -63,10 +63,11 @@
         <thead>
           <tr>
             <th>Tag</th>
-            <th>Name</th>
-            <th>Price</th>
-            <th>URL</th>
-            <th>Quantity </th>
+            <th class = "tabh">Name</th>
+            <th class = "tabh">Price</th>
+            <th class = "tabh">URL</th>
+            <th id = "quant">Quantity </th>
+            <th class = "tabh"> Priority </th>
           </tr>
         </thead>
       </table>
@@ -77,10 +78,11 @@
           {% for item in itemlist %}
           <tr>
             <td>{{item.tag}}</td>
-            <td>{{item.itemname}} </td>
-            <td>{{item.price}}</td>
-            <td> <a class = "listurl" href = '{{item.url}}'> {{item.url}} </a></td>
-            <td>{{item.quantity}}</td>
+            <td class = "tabd">{{item.itemname}} </td>
+            <td class = "tabd">${{item.price}}</td>
+            <td class = "tabd"> <a class = "listurl" href = '{{item.url}}'> {{item.url}} </a></td>
+            <td class = "tbdq">{{item.quantity}}</td>
+            <td class = "tabd">{{item.priority}}</td>
           </tr>
           {% endfor %}
         </tbody>

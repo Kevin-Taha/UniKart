@@ -116,3 +116,19 @@ section{
   right: 90px;
 
 }
+.tabh  {
+  position: relative;
+  left: 100px;
+}
+#quant {
+  position: relative;
+  left: 150px;
+}
+.tabd {
+  position: relative;
+  left: 100px;
+}
+.tbdq {
+  position: relative;
+  left: 175px;
+}
