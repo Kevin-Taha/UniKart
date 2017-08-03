@@ -14,21 +14,13 @@
   top: 20px;
 }
 
-li {
+li a{
     display: inline-flex;
     float: left;
     text-align: center;
     font-size: 20px;
     margin: 5px;
     color: black;
-}
-
-a {
-  color: black;
-}
-
-#navbar {
-  color: black;
 }
 
 #welcometext {
