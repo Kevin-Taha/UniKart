@@ -104,10 +104,14 @@ class ViewHandler(webapp2.RequestHandler):
             itemurl = self.request.get("url")
             itemquantity = self.request.get("quantity")
             itempriority = self.request.get("priority")
-            cart_name = self.request.get("cartname")
+
             if itemquantity == "":
                 itemquantity = 1
-            my_item = Item(itemname = itemname, url = itemurl, price = int(itemprice), tag = itemtag, quantity = int(itemquantity), priority = itempriority)
+
+            cartid = self.request.get("cart")
+
+
+            my_item = Item(itemname = itemname, url = itemurl, price = int(itemprice), tag = itemtag, quantity = int(itemquantity), priority = itempriority, incart = ndb.Key(Cart, cartid))
             if itemname != "":
                 query = Item.query()
                 results = query.fetch()
@@ -118,15 +122,21 @@ class ViewHandler(webapp2.RequestHandler):
                         usedList.append(url)
                 if itemurl not in usedList:
                     my_item.put()
-            itemlist = Item.query(Item.itemname != "").fetch()
+
+
+
+            itemlist = Item.query(Item.incart == ndb.Key(Cart, cartid)).fetch()
+
             total = 0;
             for item in itemlist:
                 total += item.price
             render_data = {
             "itemlist" : itemlist,
-            "total" : total
+            "total" : total,
+            "cartid" : cartid
             }
 
+            print itemlist
             self.response.write(my_template.render(render_data))
 
 
