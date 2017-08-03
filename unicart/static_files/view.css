@@ -14,13 +14,17 @@
   top: 20px;
 }
 
-li a{
+li {
     display: inline-flex;
     float: left;
     text-align: center;
     font-size: 20px;
     margin: 5px;
     color: black;
+}
+
+a {
+  color: black;
 }
 
 #welcometext {
