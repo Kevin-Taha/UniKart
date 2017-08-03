@@ -67,6 +67,7 @@ class UserPageHandler(webapp2.RequestHandler):
 
             cartlist = Cart.query(Cart.userId == current_user.user_id()).fetch()
             render_dict = {}
+
             render_data["cartlist"] = cartlist
             self.response.write(my_template.render(render_data))
 
