@@ -58,19 +58,16 @@ class AboutHandler(webapp2.RequestHandler):
 class UserPageHandler(webapp2.RequestHandler):
         def get(self):
             my_template = jinja_environment.get_template("templates/userPage.html")
-            user = users.get_current_user()
-            nickname = user.nickname()
+            current_user = users.get_current_user()
+            nickname = current_user.nickname()
             render_data = {
                 'username' : nickname,
             }
-            cartName_query = Cart.query().fetch()[0]
-            firstCartName = cartName_query.name
-            firstCartDesc = cartName_query.description
-            firstCartBud = cartName_query.budget
+
+            cartlist = Cart.query(Cart.userId == current_user.user_id()).fetch()
             render_dict = {}
-            render_data["cartname"] = firstCartName
-            render_data["cartdesc"] = firstCartDesc
-            render_data["cartbud"] = firstCartBud
+            render_data["cartlist"] = cartlist
+
             self.response.write(my_template.render(render_data))
 
 
@@ -84,7 +81,11 @@ class ListHandler(webapp2.RequestHandler):
         if cartBudget == "":  #PLEASE FIX BUG HERE
             cartBudget = 0
         cartDesc = self.request.get("desc")
-        myCart = Cart(name = cartName, budget = int(cartBudget), description = cartDesc, user = nickname )
+        myCart = Cart(name = cartName,
+                      budget = int(cartBudget),
+                      description = cartDesc,
+                      user = nickname,
+                      userId = user.user_id())
         if cartName != "":
             myCart.put()
             self.redirect("userPage")
@@ -107,7 +108,6 @@ class ViewHandler(webapp2.RequestHandler):
             my_item = Item(itemname = itemname, url = itemurl, price = int(itemprice), tag = itemtag, quantity = int(itemquantity), priority = itempriority)
             if itemname != "":
                 my_item.put()
-
             self.response.write(my_template.render())
 
 
