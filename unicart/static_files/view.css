@@ -127,7 +127,7 @@ section{
 }
 .tabh  {
   position: relative;
-  left: 100px;
+  left: 160px;
 }
 #quant {
   position: relative;
@@ -139,5 +139,23 @@ section{
 }
 .tbdq {
   position: relative;
-  left: 175px;
+  left: 10px;
+}
+.quant {
+  position: relative;
+  left: 110px;
+
+}
+.tbpr {
+  position: relative;
+  right: 100px;
+}
+.tabr {
+  position: relative;
+  right: -70px;
+}
+.checked {
+  position: relative;
+  left: 50px;
+
 }
