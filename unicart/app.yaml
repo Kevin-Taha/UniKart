@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 application: unikart-175714
+=======
+application: nth-rarity-175714
+>>>>>>> 0045d09122a14a5640db9abb3b94e4ffa783f55c
 version: 1
 runtime: python27
 api_version: 1
