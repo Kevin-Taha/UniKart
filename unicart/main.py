@@ -139,7 +139,7 @@ class ViewHandler(webapp2.RequestHandler):
             "itemlist" : itemlist,
             "total" : total,
             "cartid" : cartid, #str(results)
-            "budget" : str(results[0].budget)
+            "budget" : (results[0].budget)
             }
             self.response.write(my_template.render(render_data))
 

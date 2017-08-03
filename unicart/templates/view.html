@@ -109,7 +109,10 @@
     </div>
   </section>
 
-  <p> Total: ${{total}} Budget: ${{budget}}</p>
+  <p class = "blueback"> Total: ${{total}} Budget: ${{budget}}</p>
+  {% if total > budget %}
+ <h3> You are over budget </h3>
+  {% endif %}
 
 
 </div>
