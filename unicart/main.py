@@ -20,6 +20,7 @@ import os
 from google.appengine.api import users
 from cart import Cart
 from item import Item
+from google.appengine.ext import ndb
 
 jinja_environment = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
@@ -67,7 +68,11 @@ class UserPageHandler(webapp2.RequestHandler):
             cartlist = Cart.query(Cart.userId == current_user.user_id()).fetch()
             render_dict = {}
             render_data["cartlist"] = cartlist
-            #render_data["mycart"] = 
+
+
+            cart = ndb.Key(Cart, 5559130790035456)
+            c = cart.get()
+            render_data["mycart"] = 8
 
             self.response.write(my_template.render(render_data))
 
