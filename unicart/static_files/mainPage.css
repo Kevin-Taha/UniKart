@@ -12,6 +12,7 @@ div#welcometext {
   top: 100px;
   padding-left: 0px;
   padding-right: 0px;
+  float: left;
 }
 #loginbut {
   background-color: silver;
