@@ -70,8 +70,7 @@
 #usercheck {
     font-family: "Open Sans Light", "Helvetica Neue", sans-serif;
     font-weight: bold;
-    position: absolute;
-    left: 1000px;
+    margin: 34px 20px;
 }
 
 #logo {
@@ -80,4 +79,9 @@
   top: 50px;
   left: 50px;
   float: left;
+}
+
+#aboutlink, #usercheck {
+  display:inline-block;
+  float:right;
 }
