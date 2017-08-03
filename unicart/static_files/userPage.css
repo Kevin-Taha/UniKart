@@ -13,10 +13,9 @@
   font-size: 30px;
   opacity: 0.7;
   bottom: 90px;
-  left: 40;
   position: relative;
-  left: 450px;
   opacity: .7;
+  text-align: center;
 
 }
 
@@ -35,35 +34,30 @@
   font-size: 30px;
 }
 
-
-
 #emptylist {
   background-color: grey;
   padding: 90px;
-
-
+  text-align: center;
   border-radius: 25px;
-
-
 }
 
 #textlist{
+<<<<<<< HEAD
 
   text-align:center;
   width: 150px;
+=======
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 30px;
+  text-align: center;
+>>>>>>> 6e45e0b5969744d53f7515d04554d490ab76ad9f
   height: 200px;
 }
 
-
 #fulllist {
   background-color: grey;
-  padding: 40px;
-
-
-
+  padding: 33px;
   border-radius: 25px;
-
-
 }
 
 .fade
@@ -72,10 +66,10 @@
 }
 .fade:hover
 {
-        opacity:1;
-        -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        transform: scale(1.1);
+  opacity:1;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 #usercheck {
     font-family: "Open Sans Light", "Helvetica Neue", sans-serif;
@@ -85,10 +79,9 @@
 }
 
 #logo {
-  width: 150;
-  height: 100;
+  width: 150px;
+  height: 100px;
   top: 50px;
   left: 50px;
   float: left;
-
 }
