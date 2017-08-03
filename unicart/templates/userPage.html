@@ -48,7 +48,7 @@
 
 
   {% for cart in cartlist%}
-  <a href="">
+  <a href="/view?cart="{{mycart}}>
         <div class="col-sm-4">
           <div class="fade" id="fulllist">
             <p id="textlist"> {{cart.name}} <br> {{cart.description}} <br> Budget: {{cart.budget}} </p>
