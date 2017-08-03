@@ -176,3 +176,9 @@ section{
 .chk {
   margin: 0px;
 }
+.warning {
+  color: red;
+  font-weight: bolder;
+  font-size: 40px;
+
+}
