@@ -68,16 +68,6 @@ class UserPageHandler(webapp2.RequestHandler):
             cartlist = Cart.query(Cart.userId == current_user.user_id()).fetch()
             render_dict = {}
             render_data["cartlist"] = cartlist
-<<<<<<< HEAD
-
-
-            cart = ndb.Key(Cart, 5559130790035456)
-            c = cart.get()
-            render_data["mycart"] = 8
-=======
-            #render_data["mycart"] =
->>>>>>> 565cfef9443c13672e1b517c404bf075da1ed794
-
             self.response.write(my_template.render(render_data))
 
 
