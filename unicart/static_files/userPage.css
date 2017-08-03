@@ -1,6 +1,7 @@
 #cartText {
   text-align: center;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  color: black;
   font-size: 100px;
   opacity: 0.7;
   bottom: 200px;
@@ -10,6 +11,7 @@
 
 #cartFunction {
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  color: black;
   font-size: 30px;
   opacity: 0.7;
   bottom: 90px;
