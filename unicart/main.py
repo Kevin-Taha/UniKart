@@ -103,6 +103,7 @@ class ViewHandler(webapp2.RequestHandler):
             itemurl = self.request.get("url")
             itemquantity = self.request.get("quantity")
             itempriority = self.request.get("priority")
+            cart_name = self.request.get("cartname")
             if itemquantity == "":
                 itemquantity = 1
             my_item = Item(itemname = itemname, url = itemurl, price = int(itemprice), tag = itemtag, quantity = int(itemquantity), priority = itempriority)
