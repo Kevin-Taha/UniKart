@@ -73,14 +73,15 @@
     <div class="tbl-content">
       <table cellpadding="0" cellspacing="0" border="0">
         <tbody>
+          {% for item in itemlist %}
           <tr>
-            <td>Electronics</td>
-            <td>Nokia </td>
-            <td>$10</td>
-            <td>www.google.com</td>
-            <td>1</td>
+            <td>{{item.tag}}</td>
+            <td>{{item.itemname}} </td>
+            <td>{{item.price}}</td>
+            <td>{{item.url}}</td>
+            <td>{{item.quantity}}</td>
           </tr>
-
+          {% endfor %}
         </tbody>
       </table>
     </div>

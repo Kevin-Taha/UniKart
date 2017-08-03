@@ -108,7 +108,12 @@ class ViewHandler(webapp2.RequestHandler):
             my_item = Item(itemname = itemname, url = itemurl, price = int(itemprice), tag = itemtag, quantity = int(itemquantity), priority = itempriority)
             if itemname != "":
                 my_item.put()
-            self.response.write(my_template.render())
+            itemlist = Item.query(Item.itemname != "").fetch()
+            render_data = {
+            "itemlist" : itemlist
+            }
+
+            self.response.write(my_template.render(render_data))
 
 
 ##################################################################
