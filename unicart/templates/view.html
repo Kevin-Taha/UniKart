@@ -86,7 +86,17 @@
         <tbody>
           {% for item in itemlist %}
           <tr>
-            <td>{{item.tag}}</td>
+            <td> {% if item.tag == 'electronics' %}💻
+                  {% elif item.tag == 'furniture' %}🛏
+                  {% elif item.tag == 'clothing' %}👕
+                  {% elif item.tag == 'entertainment' %}🎮
+                  {% elif item.tag == 'hgt' %}🏡
+                  {% elif item.tag == 'grocery' %}🛒
+                  {% elif item.tag == 'kids' %}👶
+                  {% elif item.tag == 'health' %}🏥
+                  {% elif item.tag == 'other' %}🛍
+                  {% endif %}
+              {{item.tag}}</td>
             <td class = "tabd">{{item.itemname}} </td>
             <td class = "tabd">${{item.price}}</td>
             <td class = "tabd"> <a class = "listurl" href = '{{item.url}}'> Link to Site </a></td>
