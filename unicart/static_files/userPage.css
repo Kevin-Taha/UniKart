@@ -42,15 +42,9 @@
 }
 
 #textlist{
-<<<<<<< HEAD
-
-  text-align:center;
-  width: 150px;
-=======
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   font-size: 30px;
   text-align: center;
->>>>>>> 6e45e0b5969744d53f7515d04554d490ab76ad9f
   height: 200px;
 }
 
