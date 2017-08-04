@@ -9,6 +9,21 @@
   margin-top: 0px;
 }
 
+#exterminate {
+  background-color: silver;
+  width: 10%;
+  padding: 10px;
+  float: right;
+  color: #448AC9;
+  text-align: center;
+  font-family: "Open Sans Light", "Helvetica Neue", sans-serif;
+  border-radius: 25px;
+  font-size: 10px;
+}
+
+}
+
+
 #cartFunction {
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   color: black;
