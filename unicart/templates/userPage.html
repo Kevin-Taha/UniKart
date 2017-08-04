@@ -29,7 +29,7 @@
     </ul>
 
 
-    <p id="cartText"> My Carts </p> <br> </br>
+    <p id="cartText"> My Carts </p>
     </br>
     <p id="cartFunction"> Here you can view your carts. </p>
 
@@ -48,14 +48,18 @@
 
 
   {% for cart in cartlist %}
-  <a href="/view?cart={{cart.key.urlsafe()}}">
-        <div class="col-sm-4">
+
+        <div class="col-sm-4" id="cartdelete">
+          <a href="/view?cart={{cart.key.urlsafe()}}">
           <div class="fade" id="fulllist">
             <p id="textlist"> {{cart.name}} <br> {{cart.description}} <br> Budget: ${{cart.budget}} </p>
           </div>
+          </a>
           <br>
+
+          <div id = "exterminate" > Delete </div> <br> <br>
         </div>
-</a>
+
   {% endfor %}
 
       </div>
