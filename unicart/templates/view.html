@@ -26,6 +26,7 @@
       <li><a href="userPage">Your Carts</a></li>
       <li><a href="about">About</a></li>
     </ul>
+
     <br/>
     <br/>
     <div class="header">
@@ -98,11 +99,11 @@
 
         </div>
       </section>
-
-
-
     </div>
     <p id = "Totbud"> Total: ${{total}} Budget: ${{budget}}</p>
+    <button id = "linkbut" type="button" onclick = "{{tabs}}">
+      Open All Links
+    </button>
     {% if total > budget %}
     <ol class="warning"> You are over budget </ol>
     {% endif %}

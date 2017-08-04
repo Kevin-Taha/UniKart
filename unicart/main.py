@@ -135,11 +135,15 @@ class ViewHandler(webapp2.RequestHandler):
             total = 0;
             for item in itemlist:
                 total += item.price
+            tabstring = ""
+            for item in itemlist:
+                tabstring += "window.open('%s'); " % (item.url)
             render_data = {
             "itemlist" : itemlist,
             "total" : total,
             "cartid" : cartid, #str(results)
-            "budget" : (results[0].budget)
+            "budget" : (results[0].budget),
+            "tabs" : tabstring
             }
             self.response.write(my_template.render(render_data))
 
