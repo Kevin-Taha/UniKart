@@ -102,6 +102,8 @@ class ViewHandler(webapp2.RequestHandler):
             if itemprice == "":
                 itemprice = 0
             itemurl = self.request.get("url")
+            if 'www.amazon' in itemurl:
+                itemurl = itemurl.replace("www.", "smile.")
             itemquantity = self.request.get("quantity")
             itempriority = self.request.get("priority")
 
