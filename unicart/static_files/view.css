@@ -1,3 +1,5 @@
+
+
 .header {
   opacity: .7;
   font-size: 30px;
@@ -180,5 +182,10 @@ section{
   color: red;
   font-weight: bolder;
   font-size: 40px;
+  background-color: #448AC9;
 
+}
+#totbud {
+
+  font-size: 35px;
 }

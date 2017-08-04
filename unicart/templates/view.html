@@ -1,14 +1,14 @@
-
 <head>
   <title> UniKart </title>
   </script>
-  <link rel="StyleSheet" href = "https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css"> </link>
+  <link rel="StyleSheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css"> </link>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="StyleSheet" href="/resources/view.css"> </link>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src = "view.js"> </script>
+  <script src="view.js">
+  </script>
 </head>
 <a href="/"> &nbsp;
   <img id = "logo" src= "/resources/unikart.png">
@@ -29,11 +29,11 @@
     <br/>
     <br/>
     <div class="header">
-  <p> Click on the button start adding new cart items</p>
-  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Add Item</button>
-  <div id="demo" class="collapse">
-    <form id = "newitem">
-      Tag: <select name = "tag">
+      <p> Click on the button start adding new cart items</p>
+      <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Add Item</button>
+      <div id="demo" class="collapse">
+        <form id="newitem">
+          Tag: <select name="tag">
         <option value = "electronics"> 💻  Electronics </option>
         <option value = "furniture"> 🛏 Furniture </option>
         <option value = "clothing"> 👕 Clothing </option>
@@ -43,80 +43,69 @@
         <option value ="kids"> 👶 Toys and Kids </option>
         <option value = "health"> 🏥  Health </option>
         <option value = "other"> 🛍 Other </option>
-      </select>
-      Name:<input type = "text" name = "name"/>
-      Price:  <input type = "number"  name = "price" style = "width: 80px;"/>
-      URL:  <input type = "text" name = "url" class = "required"/>
-      Quantity:  <input type = "number" name = "quantity" style = "width: 40px;" value = "1"/>
-    Priority: <select name = "priority" style = "width: 110px;">
+      </select> Name:
+          <input type="text" name="name" /> Price: <input type="number" name="price" style="width: 80px;" /> URL: <input type="text" name="url" class="required" /> Quantity: <input type="number" name="quantity" style="width: 40px;" value="1" /> Priority:
+          <select name="priority" style="width: 110px;">
       <option value = "None"></option>
       <option value = "Need"> I need it </option>
       <option value = "Not Sure"> I might need it</option>
       <option value = "Want"> I want it </option>
     </select>
-      <input type = "hidden" name = "cart" value = "{{cartid}}"/>
-    </br>
-    <br/>
-      <input id = "itemsub" type = "submit" value = "Add Item" />
-    </form>
+          <input type="hidden" name="cart" value="{{cartid}}" />
+          </br>
+          <br/>
+          <input id="itemsub" type="submit" value="Add Item" />
+        </form>
+      </div>
+      <br/>
+
+      <section>
+        <!--for demo wrap-->
+        <h1>Your Cart</h1>
+        <div class="tbl-header">
+          <table cellpadding="0" cellspacing="0" border="0">
+            <thead>
+              <tr>
+                <th>Tag</th>
+                <th class="tabh">Name</th>
+                <th class="tabh">Price</th>
+                <th class="tabh">URL</th>
+                <th class="quant">Quantity </th>
+                <th class="tabr"> Priority </th>
+                <th class="checked"> Purchased? </th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="tbl-content">
+          <table cellpadding="0" cellspacing="0" border="0">
+            <tbody>
+              {% for item in itemlist %}
+              <tr>
+                <td> {% if item.tag == 'electronics' %}💻 {% elif item.tag == 'furniture' %}🛏 {% elif item.tag == 'clothing' %}👕 {% elif item.tag == 'entertainment' %}🎮 {% elif item.tag == 'hgt' %}🏡 {% elif item.tag == 'grocery' %}🛒 {% elif item.tag ==
+                  'kids' %}👶 {% elif item.tag == 'health' %}🏥 {% elif item.tag == 'other' %}🛍 {% endif %} {{item.tag}}
+                </td>
+                <td class="tabd">{{item.itemname}} </td>
+                <td class="tabd">${{item.price}}</td>
+                <td class="taburl"> <a class="listurl" href='{{item.url}}'> Link to Site </a></td>
+                <td class="tbdq">{{item.quantity}}</td>
+                <td class="tbpr">{{item.priority}}</td>
+                <td class="check"> <input class="chk" type='checkbox' name='purchased' /></td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+
+        </div>
+      </section>
+
+
+
+    </div>
+    <p id = "Totbud"> Total: ${{total}} Budget: ${{budget}}</p>
+    {% if total > budget %}
+    <ol class="warning"> You are over budget </ol>
+    {% endif %}
   </div>
-  <br/>
-
-  <section>
-    <!--for demo wrap-->
-    <h1>Your Cart</h1>
-    <div class="tbl-header">
-      <table cellpadding="0" cellspacing="0" border="0">
-        <thead>
-          <tr>
-            <th>Tag</th>
-            <th class = "tabh">Name</th>
-            <th class = "tabh">Price</th>
-            <th class = "tabh">URL</th>
-            <th class = "quant">Quantity </th>
-            <th class = "tabr"> Priority </th>
-            <th class = "checked"> Purchased? </th>
-          </tr>
-        </thead>
-      </table>
-    </div>
-    <div class="tbl-content">
-      <table cellpadding="0" cellspacing="0" border="0">
-        <tbody>
-          {% for item in itemlist %}
-          <tr>
-            <td> {% if item.tag == 'electronics' %}💻
-                  {% elif item.tag == 'furniture' %}🛏
-                  {% elif item.tag == 'clothing' %}👕
-                  {% elif item.tag == 'entertainment' %}🎮
-                  {% elif item.tag == 'hgt' %}🏡
-                  {% elif item.tag == 'grocery' %}🛒
-                  {% elif item.tag == 'kids' %}👶
-                  {% elif item.tag == 'health' %}🏥
-                  {% elif item.tag == 'other' %}🛍
-                  {% endif %}
-              {{item.tag}}</td>
-            <td class = "tabd">{{item.itemname}} </td>
-            <td class = "tabd">${{item.price}}</td>
-            <td class = "taburl"> <a class = "listurl" href = '{{item.url}}'> Link to Site </a></td>
-            <td class = "tbdq">{{item.quantity}}</td>
-            <td class = "tbpr">{{item.priority}}</td>
-            <td class = "check"> <input class = "chk" type = 'checkbox' name = 'purchased'/></td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <p class = "blueback"> Total: ${{total}} Budget: ${{budget}}</p>
-  {% if total > budget %}
- <h3 class = "warning"> You are over budget </h3>
-  {% endif %}
-
-
-</div>
-
-    </body>
-
-      </html>
+</body>
+</html>
